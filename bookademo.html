@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .person-entity select {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            /* background: #007BFF; */
+            background: linear-gradient(135deg, #fba834, #f25a74);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(0.99);
+            background: linear-gradient(-135deg, #fba834, #f25a74);           
+            /* background: #0056b3; */
+        }
+
+        .others-input {
+            display: none;
+        }
+
+
+        header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 99;
+}
+
+.logo{
+    font-size:2em;
+    color: #d57041;
+    user-select: none;
+}
+
+.navigation{
+    position: relative;
+    font-size: 1.1em;
+    color: #e67812;
+    text-decoration: none; 
+    font-weight: 500;
+    margin-left: 40px;
+
+} 
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2 class="logo"><img src="imunig/knock-fire.png" width="200" height="67"></h2>
+        <nav class="navigation"></nav>
+    </header>
+
+    <div class="container">
+        <h1>Book a Demo</h1>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="city">City Name:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="society">Society Name:</label>
+            <input type="text" id="society" name="society" required>
+
+            <label for="person-entity">Person Entity:</label>
+            <div class="person-entity">
+                <select id="person-entity" name="person-entity">
+                    <option value="committee-member">Committee Member</option>
+                    <option value="resident">Resident</option>
+                    <option value="facility-manager">Facility Manager</option>
+                    <option value="security-agency">Security Agency</option>
+                    <option value="others">Others</option>
+                </select>
+                <input type="text" id="others-input" class="others-input" placeholder="Enter other entity" />
+            </div>
+
+            <button type="submit">Request Demo</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('person-entity').addEventListener('change', function () {
+            var othersInput = document.getElementById('others-input');
+            if (this.value === 'others') {
+                othersInput.style.display = 'block';
+                othersInput.required = true;
+            } else {
+                othersInput.style.display = 'none';
+                othersInput.required = false;
+            }
+        });
+    </script>
+</body>
+</html>

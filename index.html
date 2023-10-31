@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styleupdated.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Society Management</title>
+
+    <style>body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        /* height: 100vh; */
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    
+     .conty {
+        background-color: #ffffff;
+        height: 100px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        
+        
+    }
+    
+    .logo1{
+    
+          margin-left: 160px;
+    }
+    
+    /* .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    } */
+    
+    .logo {
+        margin-right: 160px;
+        
+    }
+    
+    .mart{
+           /* border: 1px solid red;
+           border-radius: 10px; */
+           box-shadow: #fff;
+           width: 250px;
+           height: 83.3px;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    
+        margin-right: 160px;
+    }
+    
+    .options-btn {
+        /* background-color: #F57859; */
+        background: linear-gradient(to right, #F25774, #FAA834);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .options-btn:hover {
+        background-color: #1e416e;
+    }
+    
+    .options-btn i {
+        margin-left: 10px;
+    }
+    
+    .options-menu {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 540px;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+    
+    .options-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .options-menu li {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .options-menu li:hover {
+        background-color: #fb6718;
+    }
+    
+    .options-menu i {
+        margin-right: 10px;
+    }
+    .header-button {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .header-button i {
+        margin-left: 5px;
+    }
+    
+    .demo-button {
+        background-color: orange;
+        color: #fff;
+        border: 1px solid orange;
+        /* border-radius: 5px; */
+        padding: 5px 10px;
+        margin-left: 20px;
+        height: 50px;
+        border-radius: 10px;
+        font-style: bold;
+        font-size: 16px;
+        background: linear-gradient(to right, #F25774, #FAA834);
+        /* background: linear-gradient(135deg, #3399FF, #FF33CC); */
+    }
+    
+    .demo-button:hover {
+        background: linear-gradient(135deg, #FAA834, #F25774);
+      }
+    
+    
+    
+    .header-button {
+        /* background-color: #F57859; */
+        background: linear-gradient(to right, #F25774, #FAA834);
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-button:hover {
+         background-color: #1e416e;
+    }
+    
+    .header-button i {
+        margin-left: 10px;
+    }
+    
+    .option {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        /* left: 20px; */
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+         color: black;
+         text-align: left;
+    }
+    
+    .option ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .option li {
+        /* padding: 10px 20px; */
+        padding: 10px ;
+        cursor: pointer;
+    }
+    
+    .option li:hover {
+        background-color: #fb6718;
+    }
+    
+    .option i {
+        margin-right: 10px;
+    }
+    #about .container{
+     padding: 20px 10%; 
+    }
+
+    .Bannering{
+        max-height: 767px;
+        background-image: linear-gradient(to right,#f6d8d6,#f7e3cd);
+    }
+    .Bannering img{
+        width: 100%;
+        object-fit: contain;
+        max-height: 767px;
+    }
+    .Banner-text{
+        left: 30px;
+        right: 0;
+    }
+    .homepage_banner{
+        position: absolute;
+        top: 230px;
+    }
+    .section-inner{
+        width: 1995px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        width: calc(100% - 4rem);
+        
+    }
+    .homepage_banner h1.homepage_banner_h {
+    width: 25%;
+}
+
+.Banner-text.homepage_banner h1 {
+    margin: 50px 0 10px;
+}
+.Banner-text h1 {
+    font-family: Poppins-bold;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 55px;
+    color: #212121;
+    width: 50%;
+    display: inline-block;
+}
+    .homepage_banner_h {
+    position: relative;
+    z-index: 1;
+    color: #4c4c4c !important;
+}
+.homepage_banner p {
+    font-size: 20px;
+    color: #212121;
+    line-height: 27px;
+}
+
+
+.whatsapp-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 231px;
+    background: #57c77e;
+    cursor: pointer;
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.whatsapp-container:hover{
+    background: black;
+}
+
+.home-content {
+    position: relative;
+    background-color:white ;
+}
+.home-content p {
+    font-size: 17px;
+    color: #212121;
+}
+
+p {
+    line-height: 1.5;
+}
+h5{
+    font-variant-numeric: lining-nums;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -.0415625em;
+    line-height: 1.25;
+    margin: 3.5rem 0 2rem;
+}
+
+.section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: calc(100% - 4rem);
+}
+.section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: calc(100% - 4rem);
+}
+.section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    width: calc(100% - 4rem);
+}
+
+
+    
+    
+    /* FOR FOOTER style */
+    
+    
+.social-icons {
+        display: flex;
+        gap: 10px;
+      }
+
+.social-icons {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+}
+
+    
+      .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: #3b5998; /* Facebook blue background color */
+        border-radius: 50%; /* Circle shape */
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: background-color 0.3s;
+      }
+    
+      .social-icons a:hover {
+        background-color: #1877f2; /* Darker blue for Facebook on hover */
+      }
+    
+      .social-icons a.twitter {
+        background-color: #1da1f2; /* Twitter blue background color */
+      }
+    
+      .social-icons a.twitter:hover {
+        background-color: #1593e6; /* Darker blue for Twitter on hover */
+      }
+    
+      .social-icons a.instagram {
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a26b1); /* Instagram gradient background */
+      }
+    
+      .social-icons a.instagram:hover {
+        background: linear-gradient(45deg, #ffcd48, #ff4b2b, #ff004d, #cb00ff, #6800ff, #0090ff); /* Instagram gradient background on hover */
+      }
+    
+    
+    
+      /* .child{
+        display: flex;
+      } */
+      /* .child1{
+            display: flex;
+            margin:1.2rem;
+            justify-content:space-evenly;
+            align-items: flex-start;
+            font-size: 12px;
+            padding: 50px 0 100px; 
+    }
+     */
+    /* .child1{
+           width: 100%;
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr 1fr;
+           grid-gap: 20px;
+    }
+     */
+    /* .footer .child1 p{
+             margin-bottom: 1.3rem;
+    }
+     */
+     /* .footer{
+            margin-top: auto;
+            background-color: black;
+            position:fixed;
+            width: 100%;
+            background: rgb(161, 133, 79); 
+            display: block;
+            background-color: black;
+            
+    
+    }  */
+
+    .footer{
+        display: block;
+            background-color: whitesmoke;
+            padding-left: 160px;
+            padding-right: 160px;
+            
+    }
+     
+    
+    /* .container{
+          height: 300px;
+          width: 1300px;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+         
+    }*/
+
+    .row{
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .column {
+    /* display: flex; */
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    /* margin-left: 60px; */
+    /* display: flex;
+    justify-content: space-evenly; */
+
+    footer {
+    position: relative;
+    bottom: 0%;                         
+    background: #f5f5f5;
+    /* background: -webkit-linear-gradient(59deg, #3A6073, #16222A); */
+    /* background: linear-gradient(59deg, #3A6073, #16222A); */
+    color: white;
+    margin-top:auto;
+    display: flex;
+    box-shadow: #fff;
+    height: 300px;
+    /* align-items: last baseline; */
+  }
+  
+  footer a {
+    color: #060606;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #0f0b0b;
+  }
+  
+  .footer-middle {
+    padding-top: 2em;
+    color: rgb(11, 8, 8);
+    
+  }
+
+  
+  /*SOCİAL İCONS*/
+  
+  /* footer social icons */
+  
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44BCDD;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }
+
+
+  }
+
+
+  .footer-copyright {
+  /* background-color: #333; */
+  color: #0c0a0a;
+  text-align:left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.footer-copyright a {
+  color: #0a0707;
+  text-decoration: underline;
+}
+
+.footer-copyright a:hover {
+  color: #d39f2f; /* Change link color on hover */
+}
+
+.mp4_video{
+    text-align: center;
+}
+
+    
+    </style>
+</head>
+<body>
+    <header class="conty">
+      
+            <nav class="logo1">
+            <div class="logo">
+                <img src="imunig/knock-fire.png" alt="Society Logo"  class="mart" />
+            </div>
+        </nav>
+            <div class="header-content">
+                <button class="options-btn">
+                    Society Solutions
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="options-menu">
+                    <ul>
+                        <li><i class="fas fa-users"></i> Community Management</li>
+                        <li><i class="fas fa-money-bill"></i> Apartment Accounting</li>
+                        <li><i class="fas fa-user"></i> Benefits For Residents</li>
+                        <li><i class="fas fa-list-alt"></i> All Knock Features</li>
+                    </ul>
+                </div>
+
+
+           
+            <button class="header-button">
+                About Us
+                <i class="fas fa-caret-down"></i>
+
+                <div class="option">
+                    <ul>
+                        <li><i class="fas fa-book"></i> Our story</li>
+                        <li> <i class="fas fa-briefcase"></i> Careers</li>
+                        <li style="white-space: nowrap;"> <i class="fas fa-lock"></i> Data Privacy</li>
+                        <li> <i class="fas fa-newspaper"></i> Blog</li>
+                        <li> <i class="fas fa-question-circle"></i> FAQs</li>
+
+                    </ul>
+                    
+                </div>
+
+                
+            <button class="header-button">
+             <a href="login.html"><i class="fas fa-sign-in-alt"  class="paer" style="color: white;">Login</i></a>
+
+            </button>
+            <button class="header-button demo-button">
+               <b><a href="bod1.html" style="color: white;">Book a Demo </a> </b>
+            </button> 
+        </div>
+    </header>
+
+
+    <div class="Banner">
+        <div class="Bannering">
+            <img src="https://mygate.com/wp-content/uploads/2023/03/Artboard-1-2.png"/>
+        </div> 
+            <div class="Banner-text section-inner homepage_banner">
+           <h1 class="homepage_banner_h">
+               Experience community living at its best
+           </h1>
+           <br>
+           <p>Building secure, connected thriving societies</p>
+           <p class="whatsapp-container" style="color: white;">Connect with Us</p>
+            </div> 
+    </div>
+
+    <div class="mp4_video">
+        <video autoplay muted loop src="Video/body video.mp4" style="width: 528px;" style="position: relative;"></video>
+        <source src="Video/body video.mp4">
+    </div>
+
+    <div class="home-content section-inner">
+        <h5>Knock: India’s best housing society management app</h5>
+        <p>Knock, the No. 1 community management app, ensures the safety and convenience of gated societies. The software for gated society offers numerous innovative features to help simplify daily chores and improve security standards around gated communities through its Security, ERP & Accounting Management modules.</p>
+
+        <p>The app was built as a comprehensive apartment management system, keeping in mind every single stakeholder of a gated community: security guards, residents, management committee, facility managers and vendors</p>
+
+        <h5>Knock Services</h5>
+        <p>Apartment security management:
+            Knock’s security management system simplifies communication between residents and the main gate. It enables residents to notify guards that they are expecting a visitor or delivery and guards to seek the permission of a resident when someone comes unannounced. This seemingly simple connection can bring powerful change to any community. Benefits as a security management app: Convenient verification of all visitors, End-to-end management of all daily staff and Smart workflows to manage deliveries</p>
+        <p>Community ERP:
+            All management committee members get access to a configurable dashboard from where accounts, complaints, communications, staff attendance and amenities can be managed. Think of it as a control center for your society that’s accessible from anywhere. Benefits as a community management app: Manage accounts & payments on a single dashboard, get real-time updates on support tickets and keep the community on the same page via Knock ERP.</p>
+        <p>Home Services:
+            Bringing convenience to your homes. Knock home services provide you to avail day-to-day services like pest control, bathroom cleaning, airport taxi, deep cleaning, appliance repair, laundry services and many more.</p>
+
+        <h5>Data privacy & protection</h5>
+        <p>Knock is a safe to use app and has its data security policies in place. This housing society management system gives users complete control over their personal information. Knock has implemented GDPR guidelines, is compliant with ISO 27001, and ensures completely transparent and legally compliant information collection at all levels. The society maintenance app ensures that information collection is purpose oriented, clearly defined and maintained only for as long as it is necessary to fulfil the purpose.</p>
+        
+    </div>
+   
+
+    <!-- <footer class="mainfooter" role="contentinfo"> -->
+        <!-- <footer class="fixed-footer">
+        <div class="footer-middle">
+            <div class="container">
+             <div class="row"> 
+                <div class="column">
+                    <div class="col-mid-3 col-sm-6">
+                        <div class="footer-pad">
+
+
+
+       
+                <h4>Solutions</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">For Societies</a></li>
+                    <li><a href="#">Residents</a></li>
+                    <li><a href="#">Brands</a></li>
+               
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                
+                <div class="footer-pad">
+                    <h4>Company</h4>
+
+                    <ul class="list-unstyled" >
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Data Privacy</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Terms And Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+
+                <div class="footer-pad">
+                    <h4>Contact-us</h4>
+                        <ul class="list-unstyled">
+                        <li>Knock (SAL Education Opp. Science City Ahmedabad-382350++)
+                        </ul>
+            
+                    <div class="social-icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter twitter"></a>
+                        <a href="#" class="fab fa-instagram instagram"></a>
+                    </div>
+                </div>
+
+             
+            
+
+
+                <div class="col-md-4">
+                    <h4>Download our app</h4>
+
+                    <div>
+                        <img src="imunig/googleplay.webp" alt="imunig">
+                        <img src="imunig/appstore.webp" alt="imunig">
+
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</footer> -->
+
+<footer>
+    <div class="footer">
+        <div class="row">
+        <div class="column">
+            <h4>Solutions</h4>
+            <p>For Societies</p>
+            <p>For Residents</p>
+            <p>For Brands</p>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <p>Our Story</p>
+            <p>Careers</p>
+            <p>Contact us</p>
+            <p>Blog</p>
+            <p>FAQs</p>
+            <p>Data Privacy</p>
+            <p>Responsible Disclosure</p>
+            <p>Terms And Conditions</p>
+            <p>Privacy Policy</p>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <p>Address: (Knock (SAL Education), Ahmedabad-382350 Gujarat IN)</p>
+            <p>Call: 1800 32* 204*</p>
+            <p>Mail: contact@Knock.com</p>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+        </div>
+        <div class="column">
+            <h4>Download our app</h4>
+            <div>
+                <img src="imunig/googleplay.webp" alt="imunig">
+                <img src="imunig/appstore.webp" alt="imunig">
+
+            </div>
+        </div>
+        </div>
+        <div>
+            <p class="footer-copyright">Copyright 2023 Knock. All rights reserved. Click to view <a href="#">Privacy policy</a> </p>
+        </div>
+    </div>
+</footer>
+
+
+
+   
+    <script src="scri.js"></script>
+</body>
+</html> 
